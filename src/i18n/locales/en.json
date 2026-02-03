@@ -1,0 +1,112 @@
+{
+  "hero": {
+    "name": "Santiago Cacua Villamizar",
+    "role": "Software Engineer",
+    "tagline": "Full-stack development, agile methodologies, and solutions that scale.",
+    "ctaProjects": "View projects",
+    "ctaContact": "Contact"
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "about": {
+    "title": "About me",
+    "paragraph1": "Software Engineering student at Universidad de Santander, with a focus on agile methodologies, team management, and full-stack web architectures.",
+    "paragraph2": "I work autonomously on international freelance projects, from conception to deployment, translating business requirements into effective technical solutions."
+  },
+  "experience": {
+    "title": "Experience",
+    "alonso": {
+      "role": "Freelance Full-Stack Developer",
+      "company": "ALONSO LANDSCAPE SERVICE LLC",
+      "location": "United States (Remote)",
+      "period": "Jun 2025 – Jan 2026",
+      "bullets": [
+        "Design and implementation of project management system with separated frontend/backend architecture",
+        "Frontend with React and backend with Python, integrating RESTful APIs",
+        "Version control with GitHub and deployment on cPanel",
+        "Process automation to improve operational efficiency"
+      ]
+    },
+    "opmy": {
+      "role": "Freelance Web Developer",
+      "company": "OPMY PACIFIC GROUP PTY LTD",
+      "location": "Australia (Remote)",
+      "period": "Aug 2025 – Jan 2026",
+      "bullets": [
+        "Development and deployment of corporate landing page with React",
+        "Production management with cPanel for performance and availability",
+        "Direct collaboration with client to translate requirements into technical solutions"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "alonso": {
+      "name": "Project Management System",
+      "client": "ALONSO LANDSCAPE SERVICE",
+      "description": "Comprehensive system for landscaping project management: authentication, roles, material orders, and calendar.",
+      "stack": "React, Python, RESTful APIs, GitHub, cPanel",
+      "linkLabel": "Private project",
+      "private": true
+    },
+    "opmy": {
+      "name": "Corporate Landing Page",
+      "client": "OPMY PACIFIC GROUP",
+      "description": "Responsive, conversion-optimized website with order estimation by email and cPanel production management.",
+      "stack": "React, SEO, cPanel",
+      "linkLabel": "View site",
+      "url": "https://opmypacificgroup.com/"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "web": "Web Development",
+    "webItems": "React, Python, JavaScript, HTML/CSS, RESTful APIs, frontend/backend architectures",
+    "management": "Project Management",
+    "managementItems": "Requirements analysis, agile methodologies, client communication",
+    "devops": "Tools & DevOps",
+    "devopsItems": "Git/GitHub, cPanel, version control, production deployment",
+    "languages": "Languages",
+    "languagesItems": "Spanish (native), English (B1)"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind? Get in touch.",
+    "email": "Email",
+    "phone": "Phone",
+    "linkedIn": "LinkedIn",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "successTitle": "Message sent!",
+      "success": "Thank you for reaching out. I'll get back to you soon.",
+      "errorTitle": "Could not send",
+      "error": "Please check your details or email me directly at santiagocacuav@gmail.com",
+      "retry": "Try again",
+      "sendEmail": "Send email",
+      "sendAnother": "Send another message"
+    }
+  },
+  "footer": {
+    "madeWith": "Built with React + Vite",
+    "rights": "All rights reserved"
+  },
+  "demo": {
+    "title": "Live",
+    "subtitle": "Some of the capabilities I apply in my projects",
+    "responsive": "Responsive design",
+    "responsiveDesc": "This same page adapts to mobile, tablet, and desktop."
+  }
+}

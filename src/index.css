@@ -1,68 +1,67 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Tema: paleta azul oscuro y animaciones */
+@theme {
+  --color-portfolio-bg: #0f172a;
+  --color-portfolio-surface: #1e293b;
+  --color-portfolio-border: rgba(148, 163, 184, 0.2);
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  --animate-slide-up: slideUp 0.6s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  --animate-fade-in: fadeIn 0.5s ease-out forwards;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Base */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  @apply antialiased text-slate-100 bg-slate-900;
+}
+
+#root {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+section[id] {
+  scroll-margin-top: 5rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+/* Utilidades de animación (hero, etc.) */
+.animate-slide-up {
+  animation: var(--animate-slide-up);
 }
-button:hover {
-  border-color: #646cff;
+.animate-fade-in {
+  animation: var(--animate-fade-in);
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Enlaces */
+a {
+  @apply text-blue-400 transition-colors duration-200;
+}
+a:hover {
+  @apply text-blue-300;
+}
+a:focus-visible {
+  @apply outline-2 outline-offset-2 outline-blue-500;
 }

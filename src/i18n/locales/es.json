@@ -1,0 +1,112 @@
+{
+  "hero": {
+    "name": "Santiago Cacua Villamizar",
+    "role": "Ingeniero de Software",
+    "tagline": "Desarrollo full-stack, metodologías ágiles y soluciones que escalan.",
+    "ctaProjects": "Ver proyectos",
+    "ctaContact": "Contactar"
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto",
+    "language": "Idioma"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "paragraph1": "Ingeniero de Software en formación en la Universidad de Santander, con enfoque en metodologías ágiles, gestión de equipos y arquitecturas web full-stack.",
+    "paragraph2": "Trabajo de forma autónoma en proyectos freelance internacionales, desde la concepción hasta el despliegue, traduciendo requisitos de negocio en soluciones técnicas efectivas."
+  },
+  "experience": {
+    "title": "Experiencia",
+    "alonso": {
+      "role": "Desarrollador Full-Stack Freelance",
+      "company": "ALONSO LANDSCAPE SERVICE LLC",
+      "location": "Estados Unidos (Remoto)",
+      "period": "Jun 2025 – Ene 2026",
+      "bullets": [
+        "Diseño e implementación de sistema gestor de proyectos con arquitectura frontend/backend separada",
+        "Frontend con React y backend con Python, integrando APIs RESTful",
+        "Control de versiones con GitHub y despliegue en CPanel",
+        "Automatización de procesos para mejorar la eficiencia operativa"
+      ]
+    },
+    "opmy": {
+      "role": "Desarrollador Web Freelance",
+      "company": "OPMY PACIFIC GROUP PTY LTD",
+      "location": "Australia (Remoto)",
+      "period": "Ago 2025 – Ene 2026",
+      "bullets": [
+        "Desarrollo y despliegue de landing page corporativa con React",
+        "Gestión de producción con CPanel para rendimiento y disponibilidad",
+        "Colaboración directa con el cliente para traducir requisitos en soluciones técnicas"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "alonso": {
+      "name": "Sistema Gestor de Proyectos",
+      "client": "ALONSO LANDSCAPE SERVICE",
+      "description": "Sistema integral para la gestión de proyectos de paisajismo: autenticación, roles, pedidos de materiales y calendario.",
+      "stack": "React, Python, APIs RESTful, GitHub, CPanel",
+      "linkLabel": "Proyecto privado",
+      "private": true
+    },
+    "opmy": {
+      "name": "Landing Page Corporativa",
+      "client": "OPMY PACIFIC GROUP",
+      "description": "Sitio web responsive y optimizado para conversión, con estimación de pedidos por correo y gestión en CPanel.",
+      "stack": "React, SEO, CPanel",
+      "linkLabel": "Ver sitio",
+      "url": "https://opmypacificgroup.com/"
+    }
+  },
+  "skills": {
+    "title": "Habilidades",
+    "web": "Desarrollo Web",
+    "webItems": "React, Python, JavaScript, HTML/CSS, APIs RESTful, arquitecturas frontend/backend",
+    "management": "Gestión de Proyectos",
+    "managementItems": "Análisis de requisitos, metodologías ágiles, comunicación con clientes",
+    "devops": "Herramientas y DevOps",
+    "devopsItems": "Git/GitHub, CPanel, control de versiones, despliegue en producción",
+    "languages": "Idiomas",
+    "languagesItems": "Español (nativo), Inglés (B1)"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente? Escríbeme.",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "linkedIn": "LinkedIn",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@correo.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando...",
+      "successTitle": "¡Mensaje enviado!",
+      "success": "Gracias por escribirme. Te responderé en breve.",
+      "errorTitle": "No se pudo enviar",
+      "error": "Revisa los datos o escríbeme directamente a santiagocacuav@gmail.com",
+      "retry": "Reintentar",
+      "sendEmail": "Enviar correo",
+      "sendAnother": "Enviar otro mensaje"
+    }
+  },
+  "footer": {
+    "madeWith": "Hecho con React + Vite",
+    "rights": "Todos los derechos reservados"
+  },
+  "demo": {
+    "title": "En vivo",
+    "subtitle": "Algunas de las capacidades que aplico en mis proyectos",
+    "responsive": "Diseño responsive",
+    "responsiveDesc": "Esta misma página se adapta a móvil, tablet y escritorio."
+  }
+}

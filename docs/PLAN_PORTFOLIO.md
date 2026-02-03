@@ -122,25 +122,15 @@ src/
 
 ---
 
-## 7. Preguntas para afinar
+## 7. Decisiones tomadas
 
-1. **Nombre del repositorio en GitHub**  
-   ¿Será `Portafolio`, `portfolio`, `usuario.github.io` u otro? Así definimos el `base` de Vite de una vez.
-
-2. **Enlaces a proyectos**  
-   ¿Tienes URLs públicas de los proyectos (Alonso Landscape, OPMY) o solo descripción y stack? Si no hay enlace, podemos dejar “Proyecto privado / bajo NDA” o solo descripción.
-
-3. **Foto o avatar**  
-   ¿Quieres una sección “Sobre mí” con foto? Si sí, conviene tener la imagen en `public/` o `src/assets/` y referenciarla por ruta que funcione con el base path.
-
-4. **Formulario de contacto**  
-   ¿Solo mailto/tel/LinkedIn o quieres un formulario que envíe a un backend/Formspree/Netlify Forms? Esto afecta si añadimos un mini módulo de “envío de mensaje”.
-
-5. **Paleta y estilo**  
-   ¿Alguna preferencia de colores (ej. azul oscuro + acento, o neutros)? Si no, en la implementación proponemos una paleta elegante y formal.
-
-6. **Animaciones**  
-   ¿Solo transiciones suaves al scroll o también animaciones más visibles (por ejemplo con Framer Motion)? Mantendremos siempre un tono profesional.
+1. **Repositorio:** [xKQAx/Portafolio](https://github.com/xKQAx/Portafolio) → `base: '/Portafolio/'`.
+2. **Proyectos:** Uno privado (Alonso); OPMY con enlace: https://opmypacificgroup.com/.
+3. **Foto:** Sí, con placeholder por ahora (imagen en `public/` o `src/assets/` cuando se suba).
+4. **Formulario:** Formulario sencillo que envíe datos de contacto al correo vía servicio gratuito (Formspree).
+5. **Paleta:** Azul un poco oscuro como base; paleta que combine bien con ese color.
+6. **Animaciones:** Suaves (transiciones/animaciones discretas).
+7. **Extra:** Al final, sección básica de demostraciones en vivo (ej. responsive) para respaldar habilidades.
 
 ---
 
