@@ -15,7 +15,13 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center py-24 px-6 overflow-hidden"
+      className="relative min-h-screen min-h-[100dvh] flex items-center justify-center overflow-hidden"
+      style={{
+        paddingTop: 'max(5rem, env(safe-area-inset-top))',
+        paddingBottom: 'max(6rem, env(safe-area-inset-bottom))',
+        paddingLeft: 'max(var(--section-padding-x), env(safe-area-inset-left))',
+        paddingRight: 'max(var(--section-padding-x), env(safe-area-inset-right))',
+      }}
     >
       {/* Fondos en capas para profundidad */}
       <div
@@ -45,17 +51,17 @@ export function Hero() {
         }}
       />
 
-      <div className="max-w-2xl mx-auto text-center relative">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-100 mb-2 animate-slide-up tracking-tight">
+      <div className="container-section max-w-2xl text-center relative">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-100 mb-2 animate-slide-up tracking-tight break-words">
           {t('name')}
         </h1>
-        <p className="text-xl text-blue-400 font-medium mb-3 animate-slide-up delay-1">
+        <p className="text-lg sm:text-xl text-blue-400 font-medium mb-3 animate-slide-up delay-1">
           {t('role')}
         </p>
-        <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto animate-slide-up delay-2 leading-relaxed">
+        <p className="text-slate-400 text-base sm:text-lg mb-6 sm:mb-8 max-w-xl mx-auto animate-slide-up delay-2 leading-relaxed">
           {t('tagline')}
         </p>
-        <div className="flex flex-wrap gap-4 justify-center animate-slide-up delay-3">
+        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center animate-slide-up delay-3">
           <Button onClick={scrollToProjects}>{t('ctaProjects')}</Button>
           <Button variant="secondary" onClick={scrollToContact}>
             {t('ctaContact')}

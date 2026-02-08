@@ -1,11 +1,25 @@
 @import "tailwindcss";
 
-/* Tema: paleta azul oscuro y animaciones */
+/* Tema: paleta azul oscuro, animaciones y layout responsive (Single Source of Truth) */
 @theme {
   --color-portfolio-bg: #0f172a;
   --color-portfolio-surface: #1e293b;
   --color-portfolio-border: rgba(148, 163, 184, 0.2);
   --font-sans: "DM Sans", system-ui, sans-serif;
+
+  /* Breakpoints estándar (alineados con Tailwind v4) para referencia/documentación */
+  --breakpoint-sm: 40rem;   /* 640px */
+  --breakpoint-md: 48rem;  /* 768px */
+  --breakpoint-lg: 64rem;  /* 1024px */
+  --breakpoint-xl: 80rem;  /* 1280px */
+  --breakpoint-2xl: 96rem; /* 1536px */
+
+  /* Layout responsive: padding horizontal de secciones y contenedores */
+  --section-padding-x: 1rem;   /* 16px móvil */
+  --section-padding-y: 3rem;   /* 48px móvil */
+  --container-max: 56rem;      /* max-w-4xl = 896px */
+  --header-height: 4rem;      /* scroll-margin y referencias */
+
   @keyframes slideUp {
     from {
       opacity: 0;
@@ -22,30 +36,92 @@
   }
   --animate-slide-up: slideUp 0.6s cubic-bezier(0.33, 1, 0.68, 1) forwards;
   --animate-fade-in: fadeIn 0.5s ease-out forwards;
+
+  /* Colores de texto base (evitar overrides del navegador en móvil/tablet) */
+  --color-text-primary: #f1f5f9;   /* slate-100 */
+  --color-text-muted: #94a3b8;     /* slate-400 */
+  --color-text-accent: #60a5fa;    /* blue-400 */
 }
 
-/* Base */
+/* Base: forzar tema oscuro en todos los dispositivos para evitar texto negro en móvil/tablet */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  color-scheme: dark;
+  color: var(--color-text-primary);
+  background-color: #0b1120;
 }
 
 body {
   font-family: var(--font-sans);
   min-height: 100vh;
-  @apply antialiased text-slate-100;
+  min-height: 100dvh;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-text-primary);
   background-color: #0b1120;
   background-image:
     radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.15), transparent),
     radial-gradient(ellipse 60% 40% at 100% 50%, rgba(30, 58, 138, 0.12), transparent),
     radial-gradient(ellipse 50% 30% at 0% 80%, rgba(30, 58, 138, 0.08), transparent);
+  /* Safe area para muescas y barras de estado en móviles */
+  padding-left: env(safe-area-inset-left, 0);
+  padding-right: env(safe-area-inset-right, 0);
 }
 
 #root {
   min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  overflow-x: hidden;
+  color: inherit;
+  background-color: transparent;
+}
+
+/* Que main y contenedores hereden el color (móvil/tablet no aplican overrides) */
+main {
+  color: inherit;
+  background-color: transparent;
+}
+
+/* Inputs y controles: forzar colores del tema oscuro en todos los viewports */
+input,
+textarea,
+button,
+select {
+  color: inherit;
+  -webkit-text-fill-color: currentColor;
 }
 
 section[id] {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: var(--header-height);
+}
+
+/* Contenedor estándar de sección: padding responsive + max-width */
+.container-section {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--section-padding-x);
+  padding-right: var(--section-padding-x);
+}
+
+@media (min-width: 40rem) {
+  :root {
+    --section-padding-x: 1.5rem;
+    --section-padding-y: 4rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --section-padding-x: 2rem;
+    --section-padding-y: 5rem;
+  }
 }
 
 /* Utilidades de animación (hero, etc.) */
@@ -94,4 +170,25 @@ a:focus-visible {
 
 .demo-device-frame {
   transition: border-radius 0.4s ease, box-shadow 0.4s ease, max-width 0.4s ease;
+}
+
+/* Demo performance: skeleton shimmer */
+@keyframes perf-shimmer {
+  0% { background-position: -120% 0; }
+  100% { background-position: 120% 0; }
+}
+
+.perf-skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(51, 65, 85, 0.4) 0%,
+    rgba(71, 85, 105, 0.6) 50%,
+    rgba(51, 65, 85, 0.4) 100%
+  );
+  background-size: 200% 100%;
+  animation: perf-shimmer 1.5s ease-in-out infinite;
+}
+
+.perf-loaded-in {
+  animation: demo-card-in 0.4s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }

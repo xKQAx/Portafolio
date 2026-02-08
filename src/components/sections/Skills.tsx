@@ -13,16 +13,16 @@ export function Skills() {
 
   return (
     <Section id="skills" title={t('title')}>
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2">
         {SKILL_GROUPS.map(({ key, labelKey, itemsKey }) => (
           <div
             key={key}
-            className="p-6 bg-slate-800/60 border border-slate-700 rounded-xl"
+            className="p-4 sm:p-6 bg-slate-800/60 border border-slate-700 rounded-xl min-w-0"
           >
-            <h3 className="text-base font-medium text-blue-400 mb-2">
+            <h3 className="text-sm sm:text-base font-medium text-blue-400 mb-2">
               {t(labelKey)}
             </h3>
-            <p className="text-slate-400 text-[0.95rem] m-0">{t(itemsKey)}</p>
+            <p className="text-slate-400 text-sm sm:text-[0.95rem] m-0">{t(itemsKey)}</p>
           </div>
         ))}
       </div>

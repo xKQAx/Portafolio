@@ -11,19 +11,19 @@ export function Projects() {
 
   return (
     <Section id="projects" title={t('title')}>
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
         {PROJECT_KEYS.map((key) => {
           const meta = projectsMeta.find((m) => m.id === key)
           const linkLabel = t(`${key}.linkLabel`)
           const hasLink = meta && !meta.private && meta.url
 
           return (
-            <Card key={key} as="article">
-              <h3 className="text-lg font-semibold text-slate-100 mb-1">
+            <Card key={key} as="article" className="min-w-0">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-100 mb-1">
                 {t(`${key}.name`)}
               </h3>
               <p className="text-sm text-blue-400 mb-2">{t(`${key}.client`)}</p>
-              <p className="text-slate-400 text-[0.95rem] mb-4">
+              <p className="text-slate-400 text-sm sm:text-[0.95rem] mb-4">
                 {t(`${key}.description`)}
               </p>
               <p className="text-sm text-slate-500 mb-4">{t(`${key}.stack`)}</p>

@@ -14,19 +14,19 @@ export function Contact() {
         <p className="text-slate-400 text-lg m-0 mt-1">{t('subtitle')}</p>
       }
     >
-      <div className="grid gap-10 md:grid-cols-2 md:gap-12 items-start">
-        <div className="space-y-4">
-          <p className="text-slate-400 m-0">
+      <div className="grid gap-8 sm:gap-10 md:grid-cols-2 md:gap-12 items-start">
+        <div className="space-y-4 min-w-0">
+          <p className="text-slate-400 text-sm sm:text-base m-0 break-words">
             <strong className="text-slate-200">{t('email')}:</strong>{' '}
             <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
           </p>
-          <p className="text-slate-400 m-0">
+          <p className="text-slate-400 text-sm sm:text-base m-0 break-words">
             <strong className="text-slate-200">{t('phone')}:</strong>{' '}
             <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}>
               {contactInfo.phone}
             </a>
           </p>
-          <p className="text-slate-400 m-0">
+          <p className="text-slate-400 text-sm sm:text-base m-0 break-words">
             <strong className="text-slate-200">{t('linkedIn')}:</strong>{' '}
             <a
               href={contactInfo.linkedInUrl}

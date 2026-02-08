@@ -91,18 +91,18 @@ export function ContactForm() {
   if (status === 'success') {
     return (
       <div
-        className="p-8 rounded-xl border border-emerald-500/30 bg-emerald-500/5 text-center animate-fade-in"
+        className="p-4 sm:p-8 rounded-xl border border-emerald-500/30 bg-emerald-500/5 text-center animate-fade-in min-w-0"
         role="status"
         aria-live="polite"
       >
         <CheckIcon />
-        <h3 className="text-xl font-semibold text-emerald-400 mb-2">
+        <h3 className="text-lg sm:text-xl font-semibold text-emerald-400 mb-2">
           {t('successTitle')}
         </h3>
-        <p className="text-slate-400 m-0">{t('success')}</p>
+        <p className="text-slate-400 text-sm sm:text-base m-0">{t('success')}</p>
         <button
           type="button"
-          className="mt-6 px-5 py-2.5 rounded-lg font-medium text-slate-300 border border-slate-600 hover:bg-slate-800 hover:border-slate-500 transition-colors"
+          className="mt-6 px-5 py-2.5 rounded-lg font-medium text-slate-300 border border-slate-600 hover:bg-slate-800 hover:border-slate-500 transition-colors touch-manipulation"
           onClick={() => setStatus('idle')}
         >
           {t('sendAnother')}
@@ -114,11 +114,11 @@ export function ContactForm() {
   if (status === 'error') {
     return (
       <div
-        className="p-8 rounded-xl border border-red-500/30 bg-red-500/5 text-center animate-fade-in"
+        className="p-4 sm:p-8 rounded-xl border border-red-500/30 bg-red-500/5 text-center animate-fade-in min-w-0"
         role="alert"
       >
         <ErrorIcon />
-        <h3 className="text-xl font-semibold text-red-400 mb-2">
+        <h3 className="text-lg sm:text-xl font-semibold text-red-400 mb-2">
           {t('errorTitle')}
         </h3>
         <p className="text-slate-400 text-sm mb-4">{t('error')}</p>
@@ -141,7 +141,7 @@ export function ContactForm() {
 
   return (
     <form
-      className="flex flex-col gap-4"
+      className="flex flex-col gap-4 min-w-0 w-full"
       onSubmit={handleSubmit}
       aria-label="Formulario de contacto"
     >
@@ -159,7 +159,7 @@ export function ContactForm() {
           required
           disabled={status === 'sending'}
           placeholder={t('namePlaceholder')}
-          className="w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow disabled:opacity-60"
+          className="w-full min-w-0 px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow disabled:opacity-60 text-base"
         />
       </div>
       <div>
@@ -176,7 +176,7 @@ export function ContactForm() {
           required
           disabled={status === 'sending'}
           placeholder={t('emailPlaceholder')}
-          className="w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow disabled:opacity-60"
+          className="w-full min-w-0 px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow disabled:opacity-60 text-base"
         />
       </div>
       <div>
@@ -193,7 +193,7 @@ export function ContactForm() {
           rows={4}
           disabled={status === 'sending'}
           placeholder={t('messagePlaceholder')}
-          className="w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y min-h-[100px] transition-shadow disabled:opacity-60"
+          className="w-full min-w-0 px-4 py-2.5 rounded-lg bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y min-h-[100px] transition-shadow disabled:opacity-60 text-base"
         />
       </div>
       <input
@@ -207,7 +207,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium bg-blue-600 text-white border-2 border-blue-600 hover:bg-blue-700 hover:border-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 disabled:opacity-70 disabled:cursor-not-allowed transition-colors"
+        className="inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium bg-blue-600 text-white border-2 border-blue-600 hover:bg-blue-700 hover:border-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 disabled:opacity-70 disabled:cursor-not-allowed transition-colors touch-manipulation min-h-[44px]"
       >
         {status === 'sending' ? t('sending') : t('submit')}
       </button>

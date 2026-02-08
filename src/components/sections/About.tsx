@@ -7,8 +7,8 @@ export function About() {
 
   return (
     <Section id="about" title={t('title')}>
-      <div className="grid gap-8 md:grid-cols-[auto_1fr] md:gap-10 items-start">
-        <div className="w-48 h-48 md:w-52 md:h-52 mx-auto md:mx-0 shrink-0 relative">
+      <div className="grid gap-6 sm:gap-8 md:grid-cols-[auto_1fr] md:gap-10 items-start">
+        <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 mx-auto md:mx-0 shrink-0 relative">
           <img
             src={avatarPath}
             alt=""
@@ -30,9 +30,9 @@ export function About() {
             </span>
           </div>
         </div>
-        <div className="space-y-4">
-          <p className="text-slate-400 leading-relaxed m-0">{t('paragraph1')}</p>
-          <p className="text-slate-400 leading-relaxed m-0">{t('paragraph2')}</p>
+        <div className="space-y-4 min-w-0">
+          <p className="text-slate-400 text-sm sm:text-base leading-relaxed m-0">{t('paragraph1')}</p>
+          <p className="text-slate-400 text-sm sm:text-base leading-relaxed m-0">{t('paragraph2')}</p>
         </div>
       </div>
     </Section>

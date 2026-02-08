@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import { useMemo, useState } from 'react'
 import { Section } from '../ui/Section'
+import { FormValidationDemo } from './FormValidationDemo'
+import { PerformanceDemo } from './PerformanceDemo'
 
 const MIN_WIDTH = 280
 const MAX_WIDTH = 900
@@ -40,14 +42,14 @@ export function Demo() {
         <p className="text-slate-400 text-lg m-0 mt-1">{t('subtitle')}</p>
       }
     >
-      <div className="grid gap-6">
-        <div className="p-6 md:p-8 bg-slate-800/60 border border-slate-700 rounded-xl card-glow transition-shadow">
-          <h3 className="text-lg font-medium text-blue-400 mb-2">
+      <div className="grid gap-4 sm:gap-6">
+        <div className="p-4 sm:p-6 md:p-8 bg-slate-800/60 border border-slate-700 rounded-xl card-glow transition-shadow min-w-0 overflow-hidden">
+          <h3 className="text-base sm:text-lg font-medium text-blue-400 mb-2">
             {t('responsive')}
           </h3>
-          <p className="text-slate-400 m-0 mb-6">{t('responsiveDesc')}</p>
+          <p className="text-slate-400 text-sm sm:text-base m-0 mb-4 sm:mb-6">{t('responsiveDesc')}</p>
 
-          <div className="flex flex-wrap items-center gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
             <div
               className="flex gap-2 flex-wrap"
               role="tablist"
@@ -74,8 +76,8 @@ export function Demo() {
                 </button>
               ))}
             </div>
-            <div className="flex-1 min-w-[200px] flex items-center gap-3">
-              <span className="text-slate-500 text-xs tabular-nums w-12">
+            <div className="flex-1 min-w-0 w-full sm:min-w-[200px] flex items-center gap-3">
+              <span className="text-slate-500 text-xs tabular-nums w-12 shrink-0">
                 {viewportWidth}px
               </span>
               <input
@@ -84,31 +86,32 @@ export function Demo() {
                 max={MAX_WIDTH}
                 value={viewportWidth}
                 onChange={(e) => setViewportWidth(Number(e.target.value))}
-                className="flex-1 h-2 rounded-full appearance-none bg-slate-600 accent-blue-500 cursor-pointer"
+                className="flex-1 min-w-0 h-2 rounded-full appearance-none bg-slate-600 accent-blue-500 cursor-pointer touch-manipulation"
                 aria-label={t('responsiveResize')}
               />
             </div>
           </div>
 
           <div
-            className="demo-device-frame mx-auto flex flex-col items-center transition-all duration-400 ease-out"
+            className="demo-device-frame w-full max-w-full mx-auto flex flex-col items-center transition-all duration-400 ease-out"
             style={{
-              maxWidth:
-                isDesktop ? undefined : viewportWidth + frame.bezel * 2 + (isDesktop ? 32 : 0),
+              maxWidth: isDesktop
+                ? undefined
+                : `min(100%, ${viewportWidth + frame.bezel * 2}px)`,
             }}
           >
             {isMobile && (
               <div
-                className="w-full rounded-[32px] bg-slate-950 border-[12px] border-slate-800 shadow-2xl overflow-hidden"
-                style={{ maxWidth: viewportWidth + frame.bezel * 2 }}
+                className="w-full max-w-full rounded-[32px] bg-slate-950 border-[12px] border-slate-800 shadow-2xl overflow-hidden"
+                style={{
+                  width: viewportWidth + frame.bezel * 2,
+                  maxWidth: '100%',
+                }}
               >
                 <div className="h-6 bg-slate-950 flex justify-center items-end pb-1">
                   <div className="w-20 h-5 rounded-full bg-slate-800" />
                 </div>
-                <div
-                  className="bg-slate-900 overflow-hidden transition-[width] duration-300"
-                  style={{ width: viewportWidth, margin: '0 auto' }}
-                >
+                <div className="w-full min-w-0 bg-slate-900 overflow-hidden transition-[width] duration-300">
                   <FullPreviewContent
                     breakpoint="mobile"
                     showStatusBar={true}
@@ -123,13 +126,13 @@ export function Demo() {
 
             {isTablet && (
               <div
-                className="w-full rounded-[24px] bg-slate-950 border-[16px] border-slate-800 shadow-2xl overflow-hidden"
-                style={{ maxWidth: viewportWidth + frame.bezel * 2 }}
+                className="w-full max-w-full rounded-[24px] bg-slate-950 border-[16px] border-slate-800 shadow-2xl overflow-hidden"
+                style={{
+                  width: viewportWidth + frame.bezel * 2,
+                  maxWidth: '100%',
+                }}
               >
-                <div
-                  className="bg-slate-900 overflow-hidden transition-[width] duration-300 mx-auto"
-                  style={{ width: viewportWidth }}
-                >
+                <div className="w-full min-w-0 bg-slate-900 overflow-hidden transition-[width] duration-300">
                   <FullPreviewContent
                     breakpoint="tablet"
                     showStatusBar={false}
@@ -165,6 +168,30 @@ export function Demo() {
 
           <p className="text-slate-500 text-sm mt-6 m-0">
             {t('responsiveTip')}
+          </p>
+        </div>
+
+        {/* Demo: Formularios y validación */}
+        <div className="p-4 sm:p-6 md:p-8 bg-slate-800/60 border border-slate-700 rounded-xl card-glow transition-shadow min-w-0 overflow-hidden">
+          <h3 className="text-base sm:text-lg font-medium text-blue-400 mb-2">
+            {t('formsTitle')}
+          </h3>
+          <p className="text-slate-400 text-sm sm:text-base m-0 mb-4 sm:mb-6">{t('formsDesc')}</p>
+          <FormValidationDemo />
+          <p className="text-slate-500 text-xs sm:text-sm mt-4 m-0">
+            {t('formsTip')}
+          </p>
+        </div>
+
+        {/* Demo: Rendimiento y buenas prácticas */}
+        <div className="p-4 sm:p-6 md:p-8 bg-slate-800/60 border border-slate-700 rounded-xl card-glow transition-shadow min-w-0 overflow-hidden">
+          <h3 className="text-base sm:text-lg font-medium text-blue-400 mb-2">
+            {t('perfTitle')}
+          </h3>
+          <p className="text-slate-400 text-sm sm:text-base m-0 mb-4 sm:mb-6">{t('perfDesc')}</p>
+          <PerformanceDemo />
+          <p className="text-slate-500 text-xs sm:text-sm mt-4 m-0">
+            {t('perfTip')}
           </p>
         </div>
       </div>
