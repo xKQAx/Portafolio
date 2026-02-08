@@ -45,13 +45,12 @@ Coloca tu imagen en `public/avatar.jpg`. Si no existe, se muestra un placeholder
 ## Despliegue en GitHub Pages
 
 1. En el repositorio: **Settings → Pages**.
-2. En **Build and deployment**, elige **Deploy from a branch**.
-3. En **Branch**, selecciona `gh-pages` y carpeta `/ (root)`. Guarda.
-4. El workflow `.github/workflows/deploy.yml` se ejecuta en cada push a `main` y sube el contenido de `dist/` a la rama `gh-pages`.
+2. En **Build and deployment**, en "Source" elige **GitHub Actions** (no "Deploy from a branch").
+3. El workflow `.github/workflows/deploy.yml` se ejecuta en cada push a `main`: hace el build y publica la carpeta `dist/` directamente como sitio. No se usa la rama `gh-pages`.
 
-Si el deploy falla con "Permission denied" (403), en el repo ve a **Settings → Actions → General** y en "Workflow permissions" elige **Read and write permissions**. El workflow ya incluye `contents: write` para que `GITHUB_TOKEN` pueda hacer push a `gh-pages`.
+**Importante:** Si antes tenías Pages con "Deploy from a branch" y rama `gh-pages`, cámbialo a **GitHub Actions**. Así se sirve el build correcto (con `/Portafolio/assets/...`) y no el código fuente (que pediría `/src/main.tsx` y daría 404).
 
-La URL quedará en `https://xKQAx.github.io/Portafolio/`.
+La URL quedará en `https://xkqax.github.io/Portafolio/`.
 
 ## Estructura del proyecto
 
