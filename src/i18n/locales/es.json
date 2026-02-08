@@ -4,7 +4,14 @@
     "role": "Ingeniero de Software",
     "tagline": "Desarrollo full-stack, metodologías ágiles y soluciones que escalan.",
     "ctaProjects": "Ver proyectos",
-    "ctaContact": "Contactar"
+    "ctaContact": "Contactar",
+    "ctaCv": "Descargar CV"
+  },
+  "backToTop": {
+    "label": "Subir"
+  },
+  "readingProgress": {
+    "label": "Progreso de lectura"
   },
   "nav": {
     "about": "Sobre mí",
@@ -85,6 +92,7 @@
   },
   "skills": {
     "title": "Habilidades",
+    "stackTitle": "Stack técnico",
     "web": "Desarrollo Web",
     "webItems": "React, Python, JavaScript, HTML/CSS, APIs RESTful, arquitecturas frontend/backend",
     "management": "Gestión de Proyectos",

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Section } from '../ui/Section'
+import { TechStackIcons } from '../ui/TechStackIcons'
 
 const SKILL_GROUPS = [
   { key: 'web', labelKey: 'web', itemsKey: 'webItems' },
@@ -13,6 +14,7 @@ export function Skills() {
 
   return (
     <Section id="skills" title={t('title')}>
+      <TechStackIcons />
       <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2">
         {SKILL_GROUPS.map(({ key, labelKey, itemsKey }) => (
           <div

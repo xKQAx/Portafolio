@@ -23,3 +23,16 @@ export const formspreeEndpoint =
 
 /** Ruta pública para la foto/avatar (sobre mí). Colocar avatar.jpg en public/; si no existe, se usa placeholder. */
 export const avatarPath = `${import.meta.env.BASE_URL}avatar.jpg`
+
+const base = import.meta.env.BASE_URL
+
+/** URLs de los CV en PDF por idioma (archivos en public/). */
+export const cvUrlEs =
+  (import.meta.env.VITE_CV_URL_ES as string) || `${base}CV_Santiago_Cacua_ES.pdf`
+export const cvUrlEn =
+  (import.meta.env.VITE_CV_URL_EN as string) || `${base}CV_Santiago_Cacua_EN.pdf`
+
+/** Devuelve la URL del CV según el idioma (es/en). */
+export function getCvUrl(locale: string): string {
+  return locale.startsWith('en') ? cvUrlEn : cvUrlEs
+}

@@ -180,12 +180,12 @@ function AfterMode({ onLoadedCountChange }: { onLoadedCountChange: (n: number) =
   const [deferredState, setDeferredState] = useState<'idle' | 'loading' | 'loaded'>('idle')
   const [loadedCount, setLoadedCount] = useState(0)
 
+  useEffect(() => {
+    onLoadedCountChange(loadedCount)
+  }, [loadedCount, onLoadedCountChange])
+
   const handleLazyLoaded = () => {
-    setLoadedCount((c) => {
-      const next = c + 1
-      onLoadedCountChange(next)
-      return next
-    })
+    setLoadedCount((c) => c + 1)
   }
 
   const loadDeferred = () => {

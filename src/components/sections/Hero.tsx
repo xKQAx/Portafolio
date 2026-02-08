@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import { Button } from '../ui/Button'
+import { getCvUrl } from '../../config/site'
 
 export function Hero() {
-  const { t } = useTranslation('translation', { keyPrefix: 'hero' })
+  const { t, i18n } = useTranslation('translation', { keyPrefix: 'hero' })
+  const cvUrl = getCvUrl(i18n.language)
 
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
@@ -66,6 +68,17 @@ export function Hero() {
           <Button variant="secondary" onClick={scrollToContact}>
             {t('ctaContact')}
           </Button>
+          {cvUrl && (
+            <Button
+              asAnchor
+              href={cvUrl}
+              external
+              variant="ghost"
+              className="border-slate-500 text-slate-300 hover:text-slate-100 hover:border-slate-400"
+            >
+              {t('ctaCv')}
+            </Button>
+          )}
         </div>
       </div>
     </section>

@@ -4,7 +4,14 @@
     "role": "Software Engineer",
     "tagline": "Full-stack development, agile methodologies, and solutions that scale.",
     "ctaProjects": "View projects",
-    "ctaContact": "Contact"
+    "ctaContact": "Contact",
+    "ctaCv": "Download CV"
+  },
+  "backToTop": {
+    "label": "Back to top"
+  },
+  "readingProgress": {
+    "label": "Reading progress"
   },
   "nav": {
     "about": "About",
@@ -85,6 +92,7 @@
   },
   "skills": {
     "title": "Skills",
+    "stackTitle": "Tech stack",
     "web": "Web Development",
     "webItems": "React, Python, JavaScript, HTML/CSS, RESTful APIs, frontend/backend architectures",
     "management": "Project Management",

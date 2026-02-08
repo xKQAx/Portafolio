@@ -1,6 +1,9 @@
 import { useSyncHtmlLang } from './hooks/useSyncHtmlLang'
 import { Header } from './components/layout/Header'
 import { Footer } from './components/layout/Footer'
+import { SeoHead } from './components/layout/SeoHead'
+import { ReadingProgressBar } from './components/ui/ReadingProgressBar'
+import { BackToTop } from './components/ui/BackToTop'
 import { Hero } from './components/sections/Hero'
 import { About } from './components/sections/About'
 import { Process } from './components/sections/Process'
@@ -16,6 +19,8 @@ function App() {
 
   return (
     <>
+      <SeoHead />
+      <ReadingProgressBar />
       <Header />
       <main>
         <Hero />
@@ -28,6 +33,7 @@ function App() {
         <Demo />
       </main>
       <Footer />
+      <BackToTop />
     </>
   )
 }
