@@ -189,7 +189,6 @@ function FullPreviewContent({
   const { t } = useTranslation('translation', { keyPrefix: 'demo' })
   const isMobile = breakpoint === 'mobile'
   const isTablet = breakpoint === 'tablet'
-  const isDesktop = breakpoint === 'desktop'
 
   const heroGrid =
     isMobile ? 'grid-cols-1' : isTablet ? 'grid-cols-2' : 'grid-cols-2'
