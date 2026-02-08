@@ -7,8 +7,8 @@ export const seo = {
   title: 'Santiago Cacua · Ingeniero de Software',
   description:
     'Ingeniero de Software. Desarrollo full-stack, metodologías ágiles y soluciones que escalan. Portfolio y contacto.',
-  /** Ruta a la imagen para redes (relativa a la base del sitio). En index.html se usa logo.jpg para crawlers sin JS. */
-  imagePath: 'logo.jpg',
+  /** Ruta a la imagen para redes (relativa a la base del sitio). Recomendado 1200×630 px. */
+  imagePath: 'og-image.jpg',
   /** URL del sitio en producción (opcional). Si no se define, se usa origin + base en cliente. */
   siteUrl: import.meta.env.VITE_SITE_URL as string | undefined,
   /** Perfil LinkedIn para sameAs en JSON-LD */
