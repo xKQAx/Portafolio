@@ -15,16 +15,44 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center py-24 px-6 bg-gradient-to-b from-slate-900 to-slate-800/80"
+      className="relative min-h-screen flex items-center justify-center py-24 px-6 overflow-hidden"
     >
-      <div className="max-w-2xl mx-auto text-center">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-100 mb-2 animate-slide-up">
+      {/* Fondos en capas para profundidad */}
+      <div
+        className="absolute inset-0 -z-10"
+        aria-hidden
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(15, 23, 42, 0.97) 0%, rgba(15, 23, 42, 0.92) 40%, rgba(30, 41, 59, 0.9) 100%)',
+        }}
+      />
+      <div
+        className="absolute inset-0 -z-10 opacity-40"
+        aria-hidden
+        style={{
+          backgroundImage: `radial-gradient(circle at 50% 30%, rgba(59, 130, 246, 0.18) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(30, 58, 138, 0.12) 0%, transparent 40%)`,
+        }}
+      />
+      {/* Rejilla sutil */}
+      <div
+        className="absolute inset-0 -z-10 opacity-[0.03]"
+        aria-hidden
+        style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px',
+        }}
+      />
+
+      <div className="max-w-2xl mx-auto text-center relative">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-100 mb-2 animate-slide-up tracking-tight">
           {t('name')}
         </h1>
         <p className="text-xl text-blue-400 font-medium mb-3 animate-slide-up delay-1">
           {t('role')}
         </p>
-        <p className="text-slate-400 text-lg mb-8 animate-slide-up delay-2">
+        <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto animate-slide-up delay-2 leading-relaxed">
           {t('tagline')}
         </p>
         <div className="flex flex-wrap gap-4 justify-center animate-slide-up delay-3">

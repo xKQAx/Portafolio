@@ -15,7 +15,7 @@ export function Experience() {
             className={`relative pl-10 pb-10 ${idx === EXPERIENCE_KEYS.length - 1 ? 'pb-0' : ''}`}
           >
             <span
-              className="absolute left-0 top-1 w-3 h-3 rounded-full bg-blue-500 border-[3px] border-slate-900 box-border"
+              className="absolute left-0 top-1 w-3 h-3 rounded-full bg-blue-500 border-[3px] border-slate-900 box-border shadow-[0_0_12px_rgba(59,130,246,0.5)]"
               aria-hidden
             />
             {idx < EXPERIENCE_KEYS.length - 1 && (

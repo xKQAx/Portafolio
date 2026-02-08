@@ -49,6 +49,8 @@ Coloca tu imagen en `public/avatar.jpg`. Si no existe, se muestra un placeholder
 3. En **Branch**, selecciona `gh-pages` y carpeta `/ (root)`. Guarda.
 4. El workflow `.github/workflows/deploy.yml` se ejecuta en cada push a `main` y sube el contenido de `dist/` a la rama `gh-pages`.
 
+Si el deploy falla con "Permission denied" (403), en el repo ve a **Settings → Actions → General** y en "Workflow permissions" elige **Read and write permissions**. El workflow ya incluye `contents: write` para que `GITHUB_TOKEN` pueda hacer push a `gh-pages`.
+
 La URL quedará en `https://xKQAx.github.io/Portafolio/`.
 
 ## Estructura del proyecto
