@@ -1,10 +1,10 @@
 {
   "hero": {
     "name": "Santiago Cacua Villamizar",
-    "role": "Ingeniero de Software",
-    "tagline": "Desarrollo full-stack, metodologías ágiles y soluciones que escalan.",
+    "role": "Desarrollo web para negocios",
+    "tagline": "Creo sistemas de gestión y páginas web a la medida para que tu negocio se organice y te encuentren en internet.",
     "ctaProjects": "Ver proyectos",
-    "ctaContact": "Contactar",
+    "ctaContact": "Cuéntame tu proyecto",
     "ctaCv": "Descargar CV"
   },
   "backToTop": {
@@ -14,6 +14,7 @@
     "label": "Progreso de lectura"
   },
   "nav": {
+    "services": "Servicios",
     "about": "Sobre mí",
     "process": "Proceso",
     "experience": "Experiencia",
@@ -22,28 +23,47 @@
     "contact": "Contacto",
     "language": "Idioma"
   },
+  "services": {
+    "title": "En qué puedo ayudarte",
+    "subtitle": "Soluciones prácticas para organizar tu trabajo y presentar mejor tu negocio.",
+    "management": {
+      "title": "Sistema de gestión a la medida",
+      "description": "Una herramienta pensada para los procesos que hoy manejas manualmente.",
+      "item1": "Pedidos, proyectos e inventario",
+      "item2": "Clientes y calendario de trabajo",
+      "item3": "Accesos según cada persona"
+    },
+    "website": {
+      "title": "Página web o landing page",
+      "description": "Una presencia clara y fácil de usar para que tus clientes conozcan lo que ofreces.",
+      "item1": "Adaptada a celulares y computadores",
+      "item2": "Información y formas de contacto claras",
+      "item3": "Preparada para aparecer en buscadores"
+    },
+    "support": {
+      "title": "Soporte y mejoras",
+      "description": "Ayuda para mantener tu página o sistema en buen estado después de publicarlo.",
+      "item1": "Corrección de errores",
+      "item2": "Ajustes de contenido e interfaz",
+      "item3": "Mejoras pequeñas según tus necesidades"
+    }
+  },
   "about": {
     "title": "Sobre mí",
-    "paragraph1": "Ingeniero de Software en formación en la Universidad de Santander, con enfoque en metodologías ágiles, gestión de equipos y arquitecturas web full-stack.",
-    "paragraph2": "Trabajo de forma autónoma en proyectos freelance internacionales, desde la concepción hasta el despliegue, traduciendo requisitos de negocio en soluciones técnicas efectivas."
+    "paragraph1": "Estudio Ingeniería de Software en la Universidad de Santander y mi graduación está prevista para enero de 2027.",
+    "paragraph2": "Trabajo directamente contigo para entender lo que necesita tu negocio. Uso herramientas de IA para acelerar el desarrollo, y reviso, pruebo y valido cada entrega contigo paso a paso."
   },
   "process": {
     "title": "Cómo abordo un proyecto",
-    "subtitle": "Flujo que aplico desde el primer contacto hasta el despliegue en producción.",
-    "phase1_title": "Reunión inicial",
-    "phase1_desc": "Kickoff con el cliente: contexto, objetivos y alcance inicial del proyecto.",
-    "phase2_title": "Extracción de requisitos",
-    "phase2_desc": "Identificación de necesidades funcionales y no funcionales, usuarios y casos de uso.",
-    "phase3_title": "Validación de requisitos",
-    "phase3_desc": "Priorización, refinamiento y acuerdo con el cliente antes de diseñar.",
-    "phase4_title": "Diseño",
-    "phase4_desc": "Arquitectura, UX/UI y plan técnico: stack, sprints y criterios de aceptación.",
-    "phase5_title": "Desarrollo",
-    "phase5_desc": "Implementación iterativa con revisión de código y entregas incrementales.",
-    "phase6_title": "Pruebas",
-    "phase6_desc": "Testing funcional, integración y validación con el cliente (UAT).",
-    "phase7_title": "Despliegue",
-    "phase7_desc": "Puesta en producción, monitoreo y soporte post-lanzamiento."
+    "subtitle": "Pasos claros para que sepas qué esperar en cada momento.",
+    "phase1_title": "Conversamos",
+    "phase1_desc": "Entiendo qué necesitas y qué problema quieres resolver.",
+    "phase2_title": "Acordamos",
+    "phase2_desc": "Definimos qué se hará, en qué orden y cuánto cuesta, por módulos.",
+    "phase3_title": "Construyo y te muestro",
+    "phase3_desc": "Avanzamos por partes y puedes revisar cada entrega.",
+    "phase4_title": "Entrego y te acompaño",
+    "phase4_desc": "Dejo el proyecto en marcha y puedo ayudarte después del lanzamiento."
   },
   "experience": {
     "title": "Experiencia",
@@ -51,41 +71,47 @@
       "role": "Desarrollador Full-Stack Freelance",
       "company": "ALONSO LANDSCAPE SERVICE LLC",
       "location": "Estados Unidos (Remoto)",
-      "period": "Jun 2025 – Ene 2026",
+      "period": "Jun 2025 – Jul 2026",
       "bullets": [
-        "Diseño e implementación de sistema gestor de proyectos con arquitectura frontend/backend separada",
-        "Frontend con React y backend con Python, integrando APIs RESTful",
-        "Control de versiones con GitHub y despliegue en CPanel",
-        "Automatización de procesos para mejorar la eficiencia operativa"
+        "Desarrollé un sistema para organizar y dar seguimiento a proyectos de paisajismo",
+        "Incluí gestión de usuarios, pedidos de materiales y calendario",
+        "Publiqué el sistema y brindé soporte después del lanzamiento: revisé reportes de información faltante o borrada, problemas de paginación y ajustes de interfaz, encontrando la causa y aplicando correcciones"
       ]
     },
     "opmy": {
       "role": "Desarrollador Web Freelance",
       "company": "OPMY PACIFIC GROUP PTY LTD",
       "location": "Australia (Remoto)",
-      "period": "Ago 2025 – Ene 2026",
+      "period": "Ago 2025 – Jul 2026",
       "bullets": [
-        "Desarrollo y despliegue de landing page corporativa con React",
-        "Gestión de producción con CPanel para rendimiento y disponibilidad",
-        "Colaboración directa con el cliente para traducir requisitos en soluciones técnicas"
+        "Desarrollé y publiqué la página web corporativa",
+        "Incluí un formulario para recibir solicitudes de cotización por correo",
+        "Trabajé directamente con el cliente para definir el contenido y las necesidades del sitio"
       ]
     }
   },
   "projects": {
     "title": "Proyectos",
+    "labels": {
+      "problem": "Necesidad",
+      "work": "Qué hice",
+      "includes": "Qué incluye"
+    },
     "alonso": {
       "name": "Sistema Gestor de Proyectos",
       "client": "ALONSO LANDSCAPE SERVICE",
-      "description": "Sistema integral para la gestión de proyectos de paisajismo: autenticación, roles, pedidos de materiales y calendario.",
-      "stack": "React, Python, APIs RESTful, GitHub, CPanel",
+      "problem": "La empresa necesitaba reunir en un solo lugar el seguimiento de proyectos, los pedidos de materiales y el calendario.",
+      "work": "Desarrollé un sistema de gestión ajustado a ese flujo de trabajo.",
+      "includes": "Usuarios y permisos, pedidos de materiales y calendario de proyectos.",
       "linkLabel": "Proyecto privado",
       "private": true
     },
     "opmy": {
       "name": "Landing Page Corporativa",
       "client": "OPMY PACIFIC GROUP",
-      "description": "Sitio web responsive y optimizado para conversión, con estimación de pedidos por correo y gestión en CPanel.",
-      "stack": "React, SEO, CPanel",
+      "problem": "La empresa necesitaba presentar sus servicios en internet y recibir solicitudes de cotización.",
+      "work": "Diseñé, desarrollé y publiqué una página web corporativa.",
+      "includes": "Sitio adaptable a celulares, formulario de cotización y envío de solicitudes por correo.",
       "linkLabel": "Ver sitio",
       "url": "https://opmypacificgroup.com/"
     }
@@ -104,10 +130,12 @@
   },
   "contact": {
     "title": "Contacto",
-    "subtitle": "¿Tienes un proyecto en mente? Escríbeme.",
+    "subtitle": "Cuéntame qué necesita tu negocio y conversemos sobre cómo puedo ayudarte.",
     "email": "Correo",
     "phone": "Teléfono",
     "linkedIn": "LinkedIn",
+    "whatsappLabel": "Escríbeme por WhatsApp",
+    "whatsappMessage": "Hola Santiago, quiero conversar sobre un proyecto para mi negocio.",
     "form": {
       "name": "Nombre",
       "namePlaceholder": "Tu nombre",
@@ -127,7 +155,7 @@
     }
   },
   "footer": {
-    "madeWith": "Hecho con React + Vite",
+    "madeWith": "Creado por Santiago Cacua",
     "rights": "Todos los derechos reservados"
   },
   "demo": {

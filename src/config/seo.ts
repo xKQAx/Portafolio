@@ -4,9 +4,9 @@
  */
 
 export const seo = {
-  title: 'Santiago Cacua · Ingeniero de Software',
+  title: 'Santiago Cacua · Sistemas y páginas web para negocios',
   description:
-    'Ingeniero de Software. Desarrollo full-stack, metodologías ágiles y soluciones que escalan. Portfolio y contacto.',
+    'Creo sistemas de gestión y páginas web a la medida para negocios. Conoce mis proyectos y conversemos sobre lo que necesitas.',
   /** Ruta a la imagen para redes (relativa a la base del sitio). Recomendado 1200×630 px. */
   imagePath: 'og-image.jpg',
   /** URL del sitio en producción (opcional). Si no se define, se usa origin + base en cliente. */
@@ -17,5 +17,5 @@ export const seo = {
   email: 'santiagocacuav@gmail.com',
   /** Nombre completo para JSON-LD */
   name: 'Santiago Cacua Villamizar',
-  jobTitle: 'Software Engineer',
+  jobTitle: 'Web Developer',
 } as const

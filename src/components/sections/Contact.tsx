@@ -5,6 +5,9 @@ import { ContactForm } from './ContactForm'
 
 export function Contact() {
   const { t } = useTranslation('translation', { keyPrefix: 'contact' })
+  const whatsappUrl = `https://wa.me/${contactInfo.whatsappPhone}?text=${encodeURIComponent(
+    t('whatsappMessage'),
+  )}`
 
   return (
     <Section
@@ -21,9 +24,25 @@ export function Contact() {
             <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
           </p>
           <p className="text-slate-400 text-sm sm:text-base m-0 break-words">
+            <strong className="text-slate-200">WhatsApp:</strong>{' '}
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              {t('whatsappLabel')}
+            </a>
+          </p>
+          <p className="text-slate-400 text-sm sm:text-base m-0 break-words">
             <strong className="text-slate-200">{t('phone')}:</strong>{' '}
             <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}>
               {contactInfo.phone}
+            </a>
+          </p>
+          <p className="text-slate-400 text-sm sm:text-base m-0 break-words">
+            <strong className="text-slate-200">GitHub:</strong>{' '}
+            <a
+              href={contactInfo.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              xKQAx
             </a>
           </p>
           <p className="text-slate-400 text-sm sm:text-base m-0 break-words">

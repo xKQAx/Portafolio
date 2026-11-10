@@ -1,10 +1,10 @@
 {
   "hero": {
     "name": "Santiago Cacua Villamizar",
-    "role": "Software Engineer",
-    "tagline": "Full-stack development, agile methodologies, and solutions that scale.",
+    "role": "Web development for businesses",
+    "tagline": "I build custom management systems and websites to help your business stay organized and get found online.",
     "ctaProjects": "View projects",
-    "ctaContact": "Contact",
+    "ctaContact": "Tell me about your project",
     "ctaCv": "Download CV"
   },
   "backToTop": {
@@ -14,6 +14,7 @@
     "label": "Reading progress"
   },
   "nav": {
+    "services": "Services",
     "about": "About",
     "process": "Process",
     "experience": "Experience",
@@ -22,28 +23,47 @@
     "contact": "Contact",
     "language": "Language"
   },
+  "services": {
+    "title": "How I can help",
+    "subtitle": "Practical solutions to organize your work and present your business clearly.",
+    "management": {
+      "title": "Custom management system",
+      "description": "A tool designed around processes you currently handle by hand.",
+      "item1": "Orders, projects, and inventory",
+      "item2": "Customers and work calendar",
+      "item3": "Access for each team member"
+    },
+    "website": {
+      "title": "Website or landing page",
+      "description": "A clear, easy-to-use presence where customers can learn about your offer.",
+      "item1": "Works on phones and computers",
+      "item2": "Clear information and contact options",
+      "item3": "Prepared to appear in search results"
+    },
+    "support": {
+      "title": "Support and improvements",
+      "description": "Help keeping your website or system in good shape after launch.",
+      "item1": "Fixing errors",
+      "item2": "Content and interface adjustments",
+      "item3": "Small improvements as your needs change"
+    }
+  },
   "about": {
     "title": "About me",
-    "paragraph1": "Software Engineering student at Universidad de Santander, with a focus on agile methodologies, team management, and full-stack web architectures.",
-    "paragraph2": "I work autonomously on international freelance projects, from conception to deployment, translating business requirements into effective technical solutions."
+    "paragraph1": "I study Software Engineering at Universidad de Santander and expect to graduate in January 2027.",
+    "paragraph2": "I work directly with you to understand what your business needs. I use AI tools to speed up development, and I review, test, and validate each delivery with you step by step."
   },
   "process": {
     "title": "How I approach a project",
-    "subtitle": "Flow I follow from first contact to production deployment.",
-    "phase1_title": "Kickoff meeting",
-    "phase1_desc": "Initial meeting with the client: context, goals and initial project scope.",
-    "phase2_title": "Requirements gathering",
-    "phase2_desc": "Identifying functional and non-functional needs, users and use cases.",
-    "phase3_title": "Requirements validation",
-    "phase3_desc": "Prioritisation, refinement and agreement with the client before design.",
-    "phase4_title": "Design",
-    "phase4_desc": "Architecture, UX/UI and technical plan: stack, sprints and acceptance criteria.",
-    "phase5_title": "Development",
-    "phase5_desc": "Iterative implementation with code review and incremental deliveries.",
-    "phase6_title": "Testing",
-    "phase6_desc": "Functional testing, integration and validation with the client (UAT).",
-    "phase7_title": "Deployment",
-    "phase7_desc": "Production release, monitoring and post-launch support."
+    "subtitle": "Clear steps so you know what to expect at each stage.",
+    "phase1_title": "We talk",
+    "phase1_desc": "I learn what you need and what problem you want to solve.",
+    "phase2_title": "We agree",
+    "phase2_desc": "We define what to build, in what order, and the cost by module.",
+    "phase3_title": "I build and show you",
+    "phase3_desc": "We move forward in parts, and you can review each delivery.",
+    "phase4_title": "I deliver and support you",
+    "phase4_desc": "I get the project running and can help after launch."
   },
   "experience": {
     "title": "Experience",
@@ -51,41 +71,47 @@
       "role": "Freelance Full-Stack Developer",
       "company": "ALONSO LANDSCAPE SERVICE LLC",
       "location": "United States (Remote)",
-      "period": "Jun 2025 – Jan 2026",
+      "period": "Jun 2025 – Jul 2026",
       "bullets": [
-        "Design and implementation of project management system with separated frontend/backend architecture",
-        "Frontend with React and backend with Python, integrating RESTful APIs",
-        "Version control with GitHub and deployment on cPanel",
-        "Process automation to improve operational efficiency"
+        "Built a system to organize and track landscaping projects",
+        "Included user management, material orders, and a calendar",
+        "Published the system and provided post-launch support: investigated reports of missing or deleted information, pagination issues, and interface adjustments, found the cause, and fixed them"
       ]
     },
     "opmy": {
       "role": "Freelance Web Developer",
       "company": "OPMY PACIFIC GROUP PTY LTD",
       "location": "Australia (Remote)",
-      "period": "Aug 2025 – Jan 2026",
+      "period": "Aug 2025 – Jul 2026",
       "bullets": [
-        "Development and deployment of corporate landing page with React",
-        "Production management with cPanel for performance and availability",
-        "Direct collaboration with client to translate requirements into technical solutions"
+        "Built and published the corporate website",
+        "Added a form for receiving quote requests by email",
+        "Worked directly with the client to define the website content and needs"
       ]
     }
   },
   "projects": {
     "title": "Projects",
+    "labels": {
+      "problem": "Need",
+      "work": "What I did",
+      "includes": "What it includes"
+    },
     "alonso": {
       "name": "Project Management System",
       "client": "ALONSO LANDSCAPE SERVICE",
-      "description": "Comprehensive system for landscaping project management: authentication, roles, material orders, and calendar.",
-      "stack": "React, Python, RESTful APIs, GitHub, cPanel",
+      "problem": "The company needed one place to track projects, material orders, and its calendar.",
+      "work": "I built a management system tailored to that workflow.",
+      "includes": "User accounts and permissions, material orders, and a project calendar.",
       "linkLabel": "Private project",
       "private": true
     },
     "opmy": {
       "name": "Corporate Landing Page",
       "client": "OPMY PACIFIC GROUP",
-      "description": "Responsive, conversion-optimized website with order estimation by email and cPanel production management.",
-      "stack": "React, SEO, cPanel",
+      "problem": "The company needed to present its services online and receive quote requests.",
+      "work": "I designed, built, and published a corporate website.",
+      "includes": "A mobile-friendly website, quote form, and requests sent by email.",
       "linkLabel": "View site",
       "url": "https://opmypacificgroup.com/"
     }
@@ -104,10 +130,12 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Have a project in mind? Get in touch.",
+    "subtitle": "Tell me what your business needs, and we can discuss how I can help.",
     "email": "Email",
     "phone": "Phone",
     "linkedIn": "LinkedIn",
+    "whatsappLabel": "Message me on WhatsApp",
+    "whatsappMessage": "Hi Santiago, I would like to discuss a project for my business.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
@@ -127,7 +155,7 @@
     }
   },
   "footer": {
-    "madeWith": "Built with React + Vite",
+    "madeWith": "Created by Santiago Cacua",
     "rights": "All rights reserved"
   },
   "demo": {

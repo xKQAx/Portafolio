@@ -6,9 +6,6 @@ const PHASE_KEYS = [
   'phase2',
   'phase3',
   'phase4',
-  'phase5',
-  'phase6',
-  'phase7',
 ] as const
 
 export function Process() {
@@ -22,15 +19,15 @@ export function Process() {
         <p className="text-slate-400 text-lg m-0 mt-1">{t('subtitle')}</p>
       }
     >
-      {/* Flujo: móvil 1 col, tablet 2 cols, desktop 4 cols, wide 7 cols con línea */}
+      {/* Flujo: móvil 1 columna, tablet 2 columnas, escritorio 4 columnas */}
       <div className="relative">
-        {/* Línea conectora (solo xl; los círculos la tapan en el centro) */}
+        {/* Línea conectora en escritorio */}
         <div
           className="hidden xl:block absolute top-6 left-0 right-0 h-0.5 bg-slate-600/60 z-0"
           aria-hidden
         />
 
-        <ol className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-7 gap-6 sm:gap-4 xl:gap-2 list-none m-0 p-0">
+        <ol className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-4 xl:gap-5 list-none m-0 p-0">
           {PHASE_KEYS.map((key, index) => (
             <li
               key={key}

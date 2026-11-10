@@ -5,13 +5,13 @@ import { SeoHead } from './components/layout/SeoHead'
 import { ReadingProgressBar } from './components/ui/ReadingProgressBar'
 import { BackToTop } from './components/ui/BackToTop'
 import { Hero } from './components/sections/Hero'
+import { Services } from './components/sections/Services'
 import { About } from './components/sections/About'
 import { Process } from './components/sections/Process'
 import { Experience } from './components/sections/Experience'
 import { Projects } from './components/sections/Projects'
 import { Skills } from './components/sections/Skills'
 import { Contact } from './components/sections/Contact'
-import { Demo } from './components/sections/Demo'
 import './index.css'
 
 function App() {
@@ -24,13 +24,13 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Process />
-        <Experience />
+        <Services />
         <Projects />
+        <Process />
+        <About />
+        <Experience />
         <Skills />
         <Contact />
-        <Demo />
       </main>
       <Footer />
       <BackToTop />

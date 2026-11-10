@@ -5,6 +5,8 @@ export const contactInfo: ContactInfo = {
   email: 'santiagocacuav@gmail.com',
   phone: '+57 311 8526409',
   linkedInUrl: 'https://www.linkedin.com/in/santiago-cacua-villamizar',
+  githubUrl: 'https://github.com/xKQAx',
+  whatsappPhone: '573118526409',
 }
 
 /** Metadatos de proyectos (URL, privacidad). Textos en i18n. */

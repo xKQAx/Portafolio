@@ -35,7 +35,8 @@ export function SeoHead() {
     setMeta('og:url', pageUrl, true)
     setMeta('og:image', imageUrl, true)
     setMeta('og:type', 'website', true)
-    setMeta('og:locale', 'es_ES', true)
+    setMeta('og:locale', 'es_CO', true)
+    setMeta('og:locale:alternate', 'en_US', true)
     setMeta('og:site_name', seo.title, true)
 
     setMeta('twitter:card', 'summary_large_image')

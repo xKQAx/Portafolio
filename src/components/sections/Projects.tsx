@@ -23,10 +23,14 @@ export function Projects() {
                 {t(`${key}.name`)}
               </h3>
               <p className="text-sm text-blue-400 mb-2">{t(`${key}.client`)}</p>
-              <p className="text-slate-400 text-sm sm:text-[0.95rem] mb-4">
-                {t(`${key}.description`)}
-              </p>
-              <p className="text-sm text-slate-500 mb-4">{t(`${key}.stack`)}</p>
+              <dl className="space-y-3 text-sm sm:text-[0.95rem]">
+                {(['problem', 'work', 'includes'] as const).map((field) => (
+                  <div key={field}>
+                    <dt className="font-medium text-slate-200">{t(`labels.${field}`)}</dt>
+                    <dd className="m-0 text-slate-400">{t(`${key}.${field}`)}</dd>
+                  </div>
+                ))}
+              </dl>
               {hasLink && (
                 <Button
                   asAnchor

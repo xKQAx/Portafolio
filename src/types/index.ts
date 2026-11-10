@@ -1,6 +1,7 @@
 /** IDs de secciones para anclas y navegación */
 export type SectionId =
   | 'hero'
+  | 'services'
   | 'about'
   | 'process'
   | 'experience'
@@ -14,6 +15,8 @@ export interface ContactInfo {
   email: string
   phone: string
   linkedInUrl: string
+  githubUrl: string
+  whatsappPhone: string
 }
 
 /** Proyecto con datos que no dependen del idioma (URL, privacidad) */

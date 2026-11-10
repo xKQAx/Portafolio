@@ -3,11 +3,10 @@ import { useTranslation } from 'react-i18next'
 import type { SectionId } from '../../types'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
-const SECTION_IDS: SectionId[] = ['about', 'process', 'experience', 'projects', 'skills', 'contact', 'demo']
+const SECTION_IDS: SectionId[] = ['services', 'projects', 'process', 'about', 'experience', 'skills', 'contact']
 
 export function Header() {
   const { t } = useTranslation('translation', { keyPrefix: 'nav' })
-  const { t: tDemo } = useTranslation('translation', { keyPrefix: 'demo' })
   const [menuOpen, setMenuOpen] = useState(false)
 
   const goTo = useCallback((id: SectionId) => {
@@ -17,13 +16,14 @@ export function Header() {
 
   const navLabels: Record<SectionId, string> = {
     hero: t('about'),
+    services: t('services'),
     about: t('about'),
     process: t('process'),
     experience: t('experience'),
     projects: t('projects'),
     skills: t('skills'),
     contact: t('contact'),
-    demo: tDemo('title'),
+    demo: '',
   }
 
   return (

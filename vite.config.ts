@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 /** URL base del sitio (debe terminar en /). Usado en index.html para OG y canonical. */
 const SITE_URL =
   process.env.VITE_SITE_URL ||
-  'https://santiagocacua.github.io/Portafolio/'
+  'https://xkqax.github.io/Portafolio/'
 
 /** Inyecta la URL del sitio en index.html (crawlers sin JS ven og:image y og:url absolutos). */
 function htmlSeoPlugin() {
